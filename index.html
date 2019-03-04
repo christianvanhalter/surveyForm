@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <!-- User Story #1 -->
+    <h1 id="title">Formulario encuesta canal gammer</h1>
+    <div id="form-outer">
+        <!-- User Story #2 -->
+        <p id="description">Muchas gracias por darte el tiempo de responder esta pequeña encuesta, tu opinión es muy importante para nosotros y es por ello que queremos saber tu punto de vista sobre nuestro canal y poder seguir mejorando su contenido.</p>
+        <!-- User Story #3 -->
+        <form id="survey-form" action="formIngreso.php" method="post">
+            <!-- User Story #4 & #10 & #11 -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label" for="name">1. Nombre:</label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="nombre" id="name" placeholder="Ingrese su nombre" class="input-field" required>
+                </div>
+            </div>
+
+            <!-- User Story #5 & #6 & #10 & #11 -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="email-label" for="email">2. Email:</label>
+                </div>
+                <div class="rightTab">
+                    <input type="email" name="email" id="email" placeholder="Ingrese su Email" class="input-field" required>
+                </div>
+            </div>
+
+            <!-- User Story #7 & #8 & #9 & #10 & #11 -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="number">3. Edad:</label>
+                </div>
+                <div class="rightTab">
+                    <input type="number" name="edad" id="number" min="1" max="125" placeholder="Edad"
+                    class="input-field">
+                </div>
+            </div>
+            
+            <!-- User Story #12 -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="dropdown">4. Donde vez normalmente nuestras transmisiones?</label>
+                </div>
+                <div class="rightTab">
+                    <select id="dropdown" name="currentPos" class="dropdown">
+                        <option disabled value>Seleccione una opción</option>
+                        <option value="student">Facebook LIVE</option>
+                        <option value="job">Twitch LIVE</option>
+                        <option value="job">Youtube (despues de la Transmision)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- User Story #13 -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="userRating">5. ¿Qué tan probable es que recomiende nuestro canal a un amigo?</label>
+                </div>
+                <div class="rightTab">
+                    <ul style="list-style: none;">
+                        <li class="radio">
+                            <label>Sí, lo recomendaría<input name="radio-buttons" value="1" type="radio" class="userRatings">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Tal vez<input name="radio-buttons" value="2"  type="radio" class="userRatings">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>No es seguro<input name="radio-buttons" value="3"  type="radio" class="userRatings">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="preferences">6. ¿Qué género de juegos es el que más te gusta?</label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="1" type="checkbox" class="userRatings">Deportes
+                            </label>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="2" type="checkbox" class="userRatings">Pelea
+                            </label>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="3" type="checkbox" class="userRatings">FPS
+                            </label>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="4" type="checkbox" class="userRatings">Estrategia
+                            </label>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="4" type="checkbox" class="userRatings">Plataformas
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">
+                        ¿Algún comentario o sugerencia?
+                    </label>
+                </div>
+                <div class="rightTab">
+                    <!-- User Story #15 -->
+                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
